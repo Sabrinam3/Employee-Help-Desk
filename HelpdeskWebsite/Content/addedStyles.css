@@ -1,0 +1,273 @@
+﻿body {
+    background: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(75,75,75,1) 35%, rgba(179,179,179,1) 100%);
+    color:white !important;
+}
+
+div.error {
+    color: white;
+    background-color: purple;
+    font-family:Consolas;
+    font-size: 75%;
+    font-weight: 500;
+    line-height: 1;
+    left: 200px;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+img[src="Content/img/helpdesk.png"] {
+    margin-left: 1%;
+    margin-top:3%;
+    height:20%;
+    width:20%;
+    float:left;
+}
+
+#welcome {
+    margin-top: 12%;
+    font-family: 'Charmonman', Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 2px 4px 3px black;
+}
+
+#navbar {
+    height: 100px;
+    background-color: orange !important;
+    border-bottom: 2px solid black;
+    box-shadow: 0 5px 2px -2px gray;
+}
+
+#navbarmainlink{
+    color:black;
+    font:2em Consolas, Arial, sans-serif;
+    font-weight:bold;
+    padding-right:3%;
+    padding-top:2%;
+    border-right:2px solid black;
+    height:100px;
+}
+
+.nav-item{
+    margin-left:15%;
+}
+
+.nav-link, nav-link active{
+    font-size:1.5em;
+}
+
+#mainversion{
+    margin-left:50%;
+    margin-top:2%;
+}
+#currentemp{
+    margin-top:0.5em;
+    font: 2em Consolas, Arial, sans-serif;
+    font-weight:800;
+    color:white;
+}
+
+#employeeList{
+    margin-bottom:10%;
+}
+
+.col-4.h4{
+    color:white;
+    font-size:1.7em;
+}
+
+#heading {
+    background-color: #5f5f5f;
+    box-shadow: 0px 2px 2px 1px black;
+    font-size:0.8em;
+}
+
+#status {
+    background-color: orange;
+    opacity: 0.8;
+    font: 1.5em 'Segoe UI' ,Roboto,'Helvetica Neue',Arial,sans-serif;
+}
+
+.list-group-item.row.d-flex:nth-of-type(odd) {
+    background-color: #f1f1f1;
+    box-shadow: 0px 2px 2px 1px #5f5f5f;
+}
+
+.list-group-item.row.d-flex:nth-of-type(even) {
+    box-shadow: 0px 2px 2px 1px #5f5f5f;
+}
+#clicktoadd {
+        font-size: 1.5em;
+        font-style: italic;
+ }
+
+/*Modal styles*/
+
+#modalimage{
+    height:100px;
+    width:100px;
+    float:left;
+}
+
+#modalimage img{
+    height:100%;
+    width:100%;
+}
+.modal-header.d-block {
+    background-color: orange;
+    opacity: 0.8;
+    box-shadow: 0 5px 2px -2px black;
+}
+#modaltitle{
+    color:black;
+    margin-top:2%;
+    width:85%;
+}
+
+#version{
+    width:85%;
+}
+.card-header.text-center {
+    color: white;
+    background-color: #5f5f5f;
+}
+.col-3, .col-4{
+    color:black;
+    font-weight:bold;
+}
+
+.form-control {
+    border: 1px solid gray;
+}
+
+.card-body {
+    background-color: #f1f1f1;
+}
+
+.card-footer.text-center{
+    background-color:orange;
+    opacity:0.8;
+}
+
+#deletebutton, #reportbutton, #actionbutton {
+    background-color: red;
+    width: 100px;
+    border: 1px solid black;
+    box-shadow: 1px 2px 0 1px #5f5f5f;
+}
+#actionbutton, #reportbutton {
+    background-color: #0185bd;
+}
+.popover-header {
+    color: black;
+}
+
+#modalstatus{
+    font-size:1.2em;
+    font-style:italic;
+}
+
+/*Reports page*/
+#reportcard {
+    margin-top:10%;
+    margin-bottom:10%;
+}
+#reportheader {
+    color:black;
+    height: 58px;
+    background-color: orange;
+    border-bottom: 2px solid black;
+    font: 24px "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-weight:400;
+    padding:.75rem 1.25rem;
+}
+
+#subreportheader {
+    height: 66px;
+    background-color: #5f5f5f;
+}
+
+#reporttitle{
+    color:white;
+    font-family:inherit;
+    font-size:1.2em;
+    font-style:italic;
+    padding-top:1%;
+    border-bottom:1px solid orange;
+    text-align:center;
+    height:50px;
+}
+
+#reportcardbody {
+    background-color: #5f5f5f;
+}
+
+.card-footer.text-muted {
+    background-color: orange;
+}
+
+#employeebutton, #callbutton {
+    display: block;
+    margin-top: 5%;
+    background-color: #f1f1f1;
+    margin: 0 auto;
+    color: black;
+    width: 30%;
+    text-shadow: 0px 1px 1px grey;
+    border: 1px solid black;
+    box-shadow: 1px 2px 0 1px #5f5f5f;
+}
+
+#reportstatus{
+    color:black !important;
+}
+
+@media screen and (max-width:600px){
+
+    #navbarContent.navbar-collapse.collapse.show{
+        margin-top:5%;
+        margin-right:0;
+    }
+
+    ul.navbar-nav.mr-auto {
+        width: 150px;
+        margin: 0;
+        background-color: black;
+        opacity:0.8;
+    }
+
+    li.nav-item{
+        margin-left:4%;
+        width:150px;
+    }
+    a.nav-link {
+        font-size: 1em;
+    }
+
+    #navbarmainlink{
+        display:none;
+    }
+    #welcome {
+        display:none;
+    }
+    h1{
+        margin-top:3.5em;
+    }
+
+    #version{
+    position:relative;
+    top:10px;
+    left:20px;
+    }
+    #reportcard{
+        margin-top:8em;
+        width:90%;
+        margin-left:5%;
+    }
+    #employeebutton, #callbutton{
+        width:100%;
+    }
+
+
+}

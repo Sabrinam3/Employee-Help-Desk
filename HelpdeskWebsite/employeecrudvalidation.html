@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/addedStyles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link rel="icon" href="data:'base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Employee Helpdesk</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" id="navbarmainlink" href="#">CaseStudy2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/employeecrudvalidation.html">Employees</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/calls.html">Calls</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/reports.html">Reports</a>
+                </li>
+            </ul>
+        </div>
+        <div class="form-group mt-2 mr-2">
+            <input type="text" class="form-control" id="srch" placeholder="Search" />
+        </div>
+    </nav>
+    <img src="Content/img/helpdesk.png" alt="helpdesk logo" class="d-none d-md-block" />
+    <h1 id="welcome" style="margin-left:42%;">Employees</h1>
+    <h6 id="mainversion">v2.0</h6>
+    <div class="justify-content-center align-items-center row mt-5 ml-1">
+        <div class="col-12 text-center p-3"><h2 id="currentemp">Current Employees</h2></div>
+        <div class="list-group col-11" id="employeeList">
+        </div>
+    </div>
+
+    <!--Modal-->
+    <!--Adding in the form attribute here-->
+    <form id="EmployeeModalForm" name="EmployeeModalForm" method="post" action="">
+        <div class="modal fade text-center mr-3" data-backdrop="static" id="theModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-block">
+                        <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div id="modalimage"><img src="Content/img/helpdesk.png" alt="helpdesk logo" /></div>
+                        <div class="modal-title text-center" id="modaltitle"></div>
+                        <div id="version">v2.0</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mx-4 my-4">
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    Employee Information
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4">Title:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter title" id="TextBoxTitle" name="TextBoxTitle" class="form-control has-feedback" /></div>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">First:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter first name" id="TextBoxFirstname" name ="TextBoxFirstname" class="form-control" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Surname:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter last name" id="TextBoxLastname" name="TextBoxLastname" class="form-control" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Phone#:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter phone number" id="TextBoxPhone" name="TextBoxPhone" class="form-control" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Email:</div>
+                                        <div class="col-8"><input type="text" placeholder="enter email" id="TextBoxEmail" name="TextBoxEmail" class="form-control" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Department:</div>
+                                        <div class="col-8"><select id="ddlDeps" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Picture:</div>
+                                        <div class="col-4 mt-2" id="ImageHolder"></div>
+                                        <div class="col-4">&nbsp;</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <input id="fileUpload" type="file" class="border float-left col-9 col-sm-4" />
+                            <input type="button" class="btn btn-secondary" value="Update" id="actionbutton" />
+                            <input type="button" class="btn btn-secondary" data-toggle="confirmation" id="deletebutton" data-placement="right" value="Delete" />
+                            <input type="button" class="btn btn-secondary" value="Report" id="reportbutton" />
+                            <div id="modalstatus" class="text-left pt-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/employeevalidate.js"></script>
+    <script src="Scripts/bootstrap-confirmation.min.js"></script>
+</body>
+</html>
